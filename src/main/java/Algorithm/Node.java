@@ -1,3 +1,5 @@
+package Algorithm;
+
 import java.util.*;
 
 public class Node implements Comparable {
@@ -48,7 +50,7 @@ public class Node implements Comparable {
     @Override
     public int compareTo(Object o) {
         if ( !( o instanceof Node) ) {
-            throw new IllegalArgumentException("Other object is not a Node");
+            throw new IllegalArgumentException("Other object is not a Algorithm.Node");
         }
         Node other = (Node)o;
         return other.getIdentifier().compareTo( identifier );
@@ -56,7 +58,7 @@ public class Node implements Comparable {
 
     @Override
     public String toString() {
-        return "Node{" +
+        return "Algorithm.Node{" +
                 "connections=" + connections +
                 ", identifier='" + identifier + '\'' +
                 '}';

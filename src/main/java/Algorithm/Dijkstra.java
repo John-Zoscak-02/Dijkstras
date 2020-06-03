@@ -1,10 +1,11 @@
+package Algorithm;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
-public class DijkstrasAlgorithm {
-    public static Object[][] dijkstras( WeightedGraph weightedGraph, Node source ) {
+public class Dijkstra {
+    public static Object[][] dijkstras(WeightedGraph weightedGraph, Node source ) {
         Object[][] chart = init(weightedGraph,source);
         List<String> visited = new ArrayList<>();
 
@@ -31,7 +32,7 @@ public class DijkstrasAlgorithm {
         return chart;
     }
 
-    private static Object[][] updateChart( WeightedGraph weightedGraph, Node node, Node lastNode, List<String> visited, Object[][] chart, String[] identifiers ) {
+    private static Object[][] updateChart(WeightedGraph weightedGraph, Node node, Node lastNode, List<String> visited, Object[][] chart, String[] identifiers ) {
         for ( String identifier : node.getEdges().keySet() ) {
             if ( !visited.contains(identifier) ) {
                 if ( !weightedGraph.get(identifier).equals(lastNode) && (Double)chart[Arrays.binarySearch(identifiers, identifier)][1] > node.getEdges().get(identifier) + (Double)chart[Arrays.binarySearch(identifiers, node.getIdentifier())][1] ) {
@@ -40,19 +41,19 @@ public class DijkstrasAlgorithm {
                 }
             }
         }
-        visited.add(node.getIdentifier());
 //        printChart( chart );
 //        System.out.println(visited);
 
         return chart;
     }
 
-    private static Object[][] dijkstras( WeightedGraph weightedGraph, Node node, List<String> visited, Object[][] chart, String[] identifiers ) {
+    private static Object[][] dijkstras(WeightedGraph weightedGraph, Node node, List<String> visited, Object[][] chart, String[] identifiers ) {
         for ( String identifier : node.getEdges().keySet() ) {
             if ( !visited.contains(identifier) ) {
                 chart = updateChart(weightedGraph, weightedGraph.get(identifier), node, visited, chart, identifiers);
             }
         }
+        visited.add(node.getIdentifier());
         for ( String identifier : node.getEdges().keySet() ) {
             if ( !visited.contains(identifier) ) {
                 chart = dijkstras(weightedGraph, weightedGraph.get(identifier), visited, chart, identifiers);
@@ -62,7 +63,7 @@ public class DijkstrasAlgorithm {
 
     }
 
-    private static Object[][] init( WeightedGraph weightedGraph, Node source ) {
+    private static Object[][] init(WeightedGraph weightedGraph, Node source ) {
         Object[][] chart = new Object[weightedGraph.size()][3];
         Node[] nodes = weightedGraph.getNodes();
 

@@ -3,36 +3,45 @@
             Algorithm.Node cNode = new Algorithm.Node( "C" );
             Algorithm.Node dNode = new Algorithm.Node( "D" );
             Algorithm.Node eNode = new Algorithm.Node( "E" );
-            Algorithm.Node fNode = new Algorithm.Node( "F" );
-            Algorithm.Node gNode = new Algorithm.Node( "G" );
+            Algorithm.Node eNode = new Algorithm.Node( "F" );
+            Algorithm.Node eNode = new Algorithm.Node( "G" );
+            Algorithm.Node eNode = new Algorithm.Node( "H" );
 
             HashMap<Double, String> aMap = new HashMap<>();
-                aMap.put(3.0, "B");
+                aMap.put(8.0, "B");
                 aMap.put(5.0, "D");
-                aMap.put(4.0, "C");
+                aMap.put(2.0, "C");
             HashMap<Double, String> bMap = new HashMap<>();
-                bMap.put(3.0, "A");
-                bMap.put(1.0, "D");
-                bMap.put(4.0, "E");
+                bMap.put(8.0, "A");
+                bMap.put(2.0, "D");
+                bMap.put(13.0, "F");
             HashMap<Double, String> cMap = new HashMap<>();
-                cMap.put(4.0, "A");
-                cMap.put(3.0, "G");
+                cMap.put(2.0, "A");
+                cMap.put(2.0, "D");
+                cMap.put(5.0, "E");
             HashMap<Double, String> dMap = new HashMap<>();
                 dMap.put(5.0, "A");
-                dMap.put(1.0, "B");
-                dMap.put(2.0, "E");
-                dMap.put(4.0, "G");
+                dMap.put(2.0, "B");
+                dMap.put(2.0, "C");
+                dMap.put(1.0, "E");
+                dMap.put(6.0, "F");
             HashMap<Double, String> eMap = new HashMap<>();
-                eMap.put(4.0, "B");
-                eMap.put(2.0, "D");
-                eMap.put(4.0, "F");
+                eMap.put(1.0, "D");
+                eMap.put(1.0, "G");
+                eMap.put(5.0, "C");
             HashMap<Double, String> fMap = new HashMap<>();
-                fMap.put(4.0, "E");
-                fMap.put(4.0, "G");
+                fMap.put(6.0, "D");
+                fMap.put(2.0, "G");
+                fMap.put(13.0, "B");
+                fMap.put(3.0, "H");
             HashMap<Double, String> gMap = new HashMap<>();
-                gMap.put(4.0, "F");
-                gMap.put(4.0, "D");
-                gMap.put(3.0, "C");
+                gMap.put(1.0, "E")
+                gMap.put(3.0, "D");
+                gMap.put(2.0, "F");
+                gMap.put(6.0, "H");
+            HashMap<Double, String> hMap = new HashMap<>();
+                hMap.put(3.0, "F");
+                hMap.put(6.0, "G");
 
             aNode.setConnections( aMap );
             bNode.setConnections( bMap );
@@ -41,6 +50,7 @@
             eNode.setConnections( eMap );
             fNode.setConnections( fMap );
             gNode.setConnections( gMap );
+            hNode.setConnections( hMap );
 
             List<Algorithm.Node> nodes = new ArrayList<>();
             nodes.add( aNode );
@@ -50,3 +60,4 @@
             nodes.add( eNode );
             nodes.add( fNode );
             nodes.add( gNode );
+            nodes.add( hNode );

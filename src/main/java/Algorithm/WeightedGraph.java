@@ -1,3 +1,7 @@
+package Algorithm;
+
+import Algorithm.Node;
+
 import java.util.*;
 
 public class WeightedGraph {

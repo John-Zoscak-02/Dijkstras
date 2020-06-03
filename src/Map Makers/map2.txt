@@ -1,8 +1,8 @@
-            Node aNode = new Node( "A" );
-            Node bNode = new Node( "B" );
-            Node cNode = new Node( "C" );
-            Node dNode = new Node( "D" );
-            Node eNode = new Node( "E" );
+            Algorithm.Node aNode = new Algorithm.Node( "A" );
+            Algorithm.Node bNode = new Algorithm.Node( "B" );
+            Algorithm.Node cNode = new Algorithm.Node( "C" );
+            Algorithm.Node dNode = new Algorithm.Node( "D" );
+            Algorithm.Node eNode = new Algorithm.Node( "E" );
 
             HashMap<Double, String> aMap = new HashMap<>();
                 aMap.put(6.0, "B");
@@ -30,7 +30,7 @@
             dNode.setConnections( dMap );
             eNode.setConnections( eMap );
 
-            List<Node> nodes = new ArrayList<>();
+            List<Algorithm.Node> nodes = new ArrayList<>();
             nodes.add( aNode );
             nodes.add( bNode );
             nodes.add( cNode );
