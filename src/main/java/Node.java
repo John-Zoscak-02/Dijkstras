@@ -1,9 +1,9 @@
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 public class Node implements Comparable {
 
     private Map<Double, String> connections;
+    private Map<String, Double> edges;
     private String identifier;
 
     public Node(String identifier) {
@@ -28,16 +28,21 @@ public class Node implements Comparable {
         return identifier;
     }
 
-    public void setIdentifier(String identifier) {
-        this.identifier = identifier;
-    }
 
     public Map<Double, String> getConnections() {
         return connections;
     }
 
+    public Map<String, Double> getEdges() {
+        return edges;
+    }
+
     public void setConnections(Map<Double, String> connections) {
         this.connections = connections;
+        edges = new HashMap<>();
+        for (Double d : connections.keySet()) {
+            edges.put(connections.get(d), d);
+        }
     }
 
     @Override

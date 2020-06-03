@@ -8,7 +8,7 @@ import java.util.*;
 
 public class Main {
 
-    private static final boolean MAKING = true;
+    private static final boolean MAKING = false;
 
     public static void main(String[] args ) {
         if (MAKING) {
@@ -19,50 +19,37 @@ public class Main {
             System.out.println("Building map according to code.....");
 
             //create new map
-
             Node aNode = new Node( "A" );
             Node bNode = new Node( "B" );
             Node cNode = new Node( "C" );
             Node dNode = new Node( "D" );
             Node eNode = new Node( "E" );
-            Node fNode = new Node( "F" );
-            Node gNode = new Node( "G" );
 
-            TreeMap<Double, String> aMap = new TreeMap<>();
-                aMap.put(3.0, "B");
-                aMap.put(5.0, "D");
-                aMap.put(4.0, "C");
-            TreeMap<Double, String> bMap = new TreeMap<>();
-                bMap.put(3.0, "A");
-                bMap.put(1.0, "D");
-                bMap.put(4.0, "E");
-            TreeMap<Double, String> cMap = new TreeMap<>();
-                cMap.put(4.0, "A");
-                cMap.put(3.0, "G");
-            TreeMap<Double, String> dMap = new TreeMap<>();
-                dMap.put(5.0, "A");
-                dMap.put(1.0, "B");
-                dMap.put(2.0, "E");
-                dMap.put(4.0, "G");
-            TreeMap<Double, String> eMap = new TreeMap<>();
-                eMap.put(4.0, "B");
-                eMap.put(2.0, "D");
-                eMap.put(4.0, "F");
-            TreeMap<Double, String> fMap = new TreeMap<>();
-                fMap.put(4.0, "E");
-                fMap.put(4.0, "G");
-            TreeMap<Double, String> gMap = new TreeMap<>();
-                gMap.put(4.0, "F");
-                gMap.put(4.0, "D");
-                gMap.put(3.0, "C");
+            HashMap<Double, String> aMap = new HashMap<>();
+            aMap.put(6.0, "B");
+            aMap.put(1.0, "D");
+            HashMap<Double, String> bMap = new HashMap<>();
+            bMap.put(6.0, "A");
+            bMap.put(2.0, "D");
+            bMap.put(2.0, "E");
+            bMap.put(5.0, "C");
+            HashMap<Double, String> cMap = new HashMap<>();
+            cMap.put(5.0, "B");
+            cMap.put(5.0, "E");
+            HashMap<Double, String> dMap = new HashMap<>();
+            dMap.put(1.0, "A");
+            dMap.put(2.0, "B");
+            dMap.put(1.0, "E");
+            HashMap<Double, String> eMap = new HashMap<>();
+            eMap.put(2.0, "B");
+            eMap.put(1.0, "D");
+            eMap.put(5.0, "C");
 
             aNode.setConnections( aMap );
             bNode.setConnections( bMap );
             cNode.setConnections( cMap );
             dNode.setConnections( dMap );
             eNode.setConnections( eMap );
-            fNode.setConnections( fMap );
-            gNode.setConnections( gMap );
 
             List<Node> nodes = new ArrayList<>();
             nodes.add( aNode );
@@ -70,8 +57,6 @@ public class Main {
             nodes.add( cNode );
             nodes.add( dNode );
             nodes.add( eNode );
-            nodes.add( fNode );
-            nodes.add( gNode );
 
             WeightedGraph graph = new WeightedGraph(nodes);
 
@@ -97,18 +82,17 @@ public class Main {
             System.out.println("Which map would you like to use? Please specify an integer");
             File mapFile = new File( String.format("src/Maps/map%d.json", scanner.nextInt()));
             if ( Files.exists(mapFile.toPath())) {
-                System.out.println("File Found. ");
-                try {
-                    System.out.println(Files.readString(mapFile.toPath()));
-                } catch ( Exception e ) {
-                    e.printStackTrace();
-                }
-
+                System.out.println("File Found.");
+//                try {
+//                    System.out.println(Files.readString(mapFile.toPath()));
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
                 System.out.println("Apply Dijkstras?");
                 if ( scanner.next().contains("y") ) {
                     try {
                         WeightedGraph graph = gson.fromJson( new FileReader(mapFile), WeightedGraph.class);
-                        DijkstrasAlgorithm.dijkstras( graph, graph.get("A") );
+                        DijkstrasAlgorithm.printChart( DijkstrasAlgorithm.dijkstras( graph, graph.get("A") ) );
                     } catch ( Exception e ) {
                         e.printStackTrace();
                     }

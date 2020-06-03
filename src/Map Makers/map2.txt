@@ -1,0 +1,38 @@
+            Node aNode = new Node( "A" );
+            Node bNode = new Node( "B" );
+            Node cNode = new Node( "C" );
+            Node dNode = new Node( "D" );
+            Node eNode = new Node( "E" );
+
+            HashMap<Double, String> aMap = new HashMap<>();
+                aMap.put(6.0, "B");
+                aMap.put(1.0, "D");
+            HashMap<Double, String> bMap = new HashMap<>();
+                bMap.put(6.0, "A");
+                bMap.put(2.0, "D");
+                bMap.put(2.0, "E");
+                bMap.put(5.0, "C");
+            HashMap<Double, String> cMap = new HashMap<>();
+                cMap.put(5.0, "B");
+                cMap.put(5.0, "E");
+            HashMap<Double, String> dMap = new HashMap<>();
+                dMap.put(1.0, "A");
+                dMap.put(2.0, "B");
+                dMap.put(1.0, "E");
+            HashMap<Double, String> eMap = new HashMap<>();
+                eMap.put(2.0, "B");
+                eMap.put(1.0, "D");
+                eMap.put(5.0, "C");
+
+            aNode.setConnections( aMap );
+            bNode.setConnections( bMap );
+            cNode.setConnections( cMap );
+            dNode.setConnections( dMap );
+            eNode.setConnections( eMap );
+
+            List<Node> nodes = new ArrayList<>();
+            nodes.add( aNode );
+            nodes.add( bNode );
+            nodes.add( cNode );
+            nodes.add( dNode );
+            nodes.add( eNode );

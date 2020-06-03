@@ -1,0 +1,56 @@
+{
+  "nodes": {
+    "A": {
+      "connections": {
+        "3.0": "B",
+        "4.0": "C",
+        "5.0": "D"
+      },
+      "identifier": "A"
+    },
+    "B": {
+      "connections": {
+        "1.0": "D",
+        "3.0": "A",
+        "4.0": "E"
+      },
+      "identifier": "B"
+    },
+    "C": {
+      "connections": {
+        "3.0": "G",
+        "4.0": "A"
+      },
+      "identifier": "C"
+    },
+    "D": {
+      "connections": {
+        "1.0": "B",
+        "2.0": "E",
+        "4.0": "G",
+        "5.0": "A"
+      },
+      "identifier": "D"
+    },
+    "E": {
+      "connections": {
+        "2.0": "D",
+        "4.0": "F"
+      },
+      "identifier": "E"
+    },
+    "F": {
+      "connections": {
+        "4.0": "G"
+      },
+      "identifier": "F"
+    },
+    "G": {
+      "connections": {
+        "3.0": "C",
+        "4.0": "D"
+      },
+      "identifier": "G"
+    }
+  }
+}

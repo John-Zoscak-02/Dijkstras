@@ -2,29 +2,31 @@ import java.util.*;
 
 public class WeightedGraph {
     private Map<String, Node> nodes;
+    private Node[] nodeArr;
 
     public WeightedGraph(Collection<Node> nodes) {
         this.nodes = new HashMap<>();
+        nodeArr = new Node[nodes.size()];
+
+        int i = 0;
         for ( Node n : nodes ) {
             this.nodes.put(n.getIdentifier(), n);
+            nodeArr[i] = n;
+            i++;
+
         }
     }
 
     public Node[] getNodes() {
-        return nodes.values().toArray( new Node[nodes.size()] );
+        return nodeArr;
     }
 
     public Node get( String identifier ) {
         return nodes.get( identifier );
     }
 
-    public boolean set( String identifier, Node n ) {
-        if ( nodes.containsKey(identifier) ) {
-            nodes.put(identifier, n);
-            return true;
-        }
-        return false;
+    public int size() {
+        return nodes.size();
     }
-
 
 }
