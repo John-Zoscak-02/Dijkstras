@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f998088-6b59-49f0-b779-bead6574d894" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Map Makers/map3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Interface/MapRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -13,14 +10,16 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/DijkstrasAlgorithm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Algorithm/Dijkstra.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Algorithm/Dijkstra.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Algorithm/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Algorithm/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Interface/MapMaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Interface/MapMaker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Map Makers/map1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map Makers/map1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Map Makers/map2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map Makers/map2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DijkstrasAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Algorithm/Dijkstra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interface/MapMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Algorithm/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WeightedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Algorithm/WeightedGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Map Makers/map3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map Makers/map3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Maps/map3.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maps/map3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Algorithm/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Algorithm/Dijkstra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Algorithm/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Algorithm/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interface/MapMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interface/MapMaker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +42,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cYSaGq3gwKqgenINwefg1uwqza" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -99,12 +101,15 @@
       <option name="presentableId" value="Default" />
       <updated>1590704095994</updated>
       <workItem from="1590704102441" duration="24063000" />
-      <workItem from="1591049664372" duration="24887000" />
+      <workItem from="1591049664372" duration="41749000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="610" y="308" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591220115672">
@@ -119,33 +124,33 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="546" y="246" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1590704235102" />
-    <state width="1637" height="290" key="GridCell.Tab.0.bottom" timestamp="1591221666475">
+    <state width="1637" height="290" key="GridCell.Tab.0.bottom" timestamp="1591636511659">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1237" height="105" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590710192550" />
-    <state width="1637" height="290" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1591221666475" />
-    <state width="1637" height="290" key="GridCell.Tab.0.center" timestamp="1591221666475">
+    <state width="1637" height="290" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1591636511659" />
+    <state width="1637" height="290" key="GridCell.Tab.0.center" timestamp="1591636511659">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1237" height="105" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590710192550" />
-    <state width="1637" height="290" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1591221666475" />
-    <state width="1637" height="290" key="GridCell.Tab.0.left" timestamp="1591221666475">
+    <state width="1637" height="290" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1591636511659" />
+    <state width="1637" height="290" key="GridCell.Tab.0.left" timestamp="1591636511659">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1237" height="105" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590710192549" />
-    <state width="1637" height="290" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1591221666475" />
-    <state width="1637" height="290" key="GridCell.Tab.0.right" timestamp="1591221666475">
+    <state width="1637" height="290" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1591636511659" />
+    <state width="1637" height="290" key="GridCell.Tab.0.right" timestamp="1591636511659">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1237" height="105" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590710192550" />
-    <state width="1637" height="290" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1591221666475" />
+    <state width="1637" height="290" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1591636511659" />
     <state x="320" y="79" key="SettingsEditor" timestamp="1591049424493">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="320" y="79" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1591049424493" />
-    <state x="503" y="217" width="672" height="678" key="search.everywhere.popup" timestamp="1591221287169">
+    <state x="503" y="217" width="672" height="678" key="search.everywhere.popup" timestamp="1591632416425">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="503" y="217" width="672" height="678" key="search.everywhere.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1591221287169" />
+    <state x="503" y="217" width="672" height="678" key="search.everywhere.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1591632416425" />
   </component>
 </project>

@@ -1,171 +1,183 @@
 {
   "nodes": {
     "A": {
-      "connections": {
-        "4.0": "C",
-        "5.0": "D",
-        "3.0": "B"
-      },
       "edges": {
         "B": 3.0,
         "C": 4.0,
         "D": 5.0
       },
+      "orderedIdentifiers": [
+        "B",
+        "C",
+        "D"
+      ],
       "identifier": "A"
     },
     "B": {
-      "connections": {
-        "1.0": "D",
-        "4.0": "E",
-        "3.0": "A"
-      },
       "edges": {
         "A": 3.0,
         "D": 1.0,
         "E": 4.0
       },
+      "orderedIdentifiers": [
+        "D",
+        "A",
+        "E"
+      ],
       "identifier": "B"
     },
     "C": {
-      "connections": {
-        "4.0": "A",
-        "3.0": "G"
-      },
       "edges": {
         "A": 4.0,
         "G": 3.0
       },
+      "orderedIdentifiers": [
+        "G",
+        "A"
+      ],
       "identifier": "C"
     },
     "D": {
-      "connections": {
-        "1.0": "B",
-        "2.0": "E",
-        "4.0": "G",
-        "5.0": "A"
-      },
       "edges": {
         "A": 5.0,
         "B": 1.0,
         "E": 2.0,
         "G": 4.0
       },
+      "orderedIdentifiers": [
+        "B",
+        "E",
+        "G",
+        "A"
+      ],
       "identifier": "D"
     },
     "E": {
-      "connections": {
-        "4.0": "F",
-        "2.0": "D"
-      },
       "edges": {
+        "B": 4.0,
         "D": 2.0,
         "F": 4.0
       },
+      "orderedIdentifiers": [
+        "D",
+        "B",
+        "F"
+      ],
       "identifier": "E"
     },
     "F": {
-      "connections": {
-        "4.0": "G"
-      },
       "edges": {
+        "E": 4.0,
         "G": 4.0
       },
+      "orderedIdentifiers": [
+        "E",
+        "G"
+      ],
       "identifier": "F"
     },
     "G": {
-      "connections": {
-        "4.0": "D",
-        "3.0": "C"
-      },
       "edges": {
         "C": 3.0,
-        "D": 4.0
+        "D": 4.0,
+        "F": 4.0
       },
+      "orderedIdentifiers": [
+        "C",
+        "D",
+        "F"
+      ],
       "identifier": "G"
     }
   },
   "nodeArr": [
     {
-      "connections": {
-        "4.0": "C",
-        "5.0": "D",
-        "3.0": "B"
-      },
       "edges": {
         "B": 3.0,
         "C": 4.0,
         "D": 5.0
       },
+      "orderedIdentifiers": [
+        "B",
+        "C",
+        "D"
+      ],
       "identifier": "A"
     },
     {
-      "connections": {
-        "1.0": "D",
-        "4.0": "E",
-        "3.0": "A"
-      },
       "edges": {
         "A": 3.0,
         "D": 1.0,
         "E": 4.0
       },
+      "orderedIdentifiers": [
+        "D",
+        "A",
+        "E"
+      ],
       "identifier": "B"
     },
     {
-      "connections": {
-        "4.0": "A",
-        "3.0": "G"
-      },
       "edges": {
         "A": 4.0,
         "G": 3.0
       },
+      "orderedIdentifiers": [
+        "G",
+        "A"
+      ],
       "identifier": "C"
     },
     {
-      "connections": {
-        "1.0": "B",
-        "2.0": "E",
-        "4.0": "G",
-        "5.0": "A"
-      },
       "edges": {
         "A": 5.0,
         "B": 1.0,
         "E": 2.0,
         "G": 4.0
       },
+      "orderedIdentifiers": [
+        "B",
+        "E",
+        "G",
+        "A"
+      ],
       "identifier": "D"
     },
     {
-      "connections": {
-        "4.0": "F",
-        "2.0": "D"
-      },
       "edges": {
+        "B": 4.0,
         "D": 2.0,
         "F": 4.0
       },
+      "orderedIdentifiers": [
+        "D",
+        "B",
+        "F"
+      ],
       "identifier": "E"
     },
     {
-      "connections": {
-        "4.0": "G"
-      },
       "edges": {
+        "E": 4.0,
         "G": 4.0
       },
+      "orderedIdentifiers": [
+        "E",
+        "G"
+      ],
       "identifier": "F"
     },
     {
-      "connections": {
-        "4.0": "D",
-        "3.0": "C"
-      },
       "edges": {
         "C": 3.0,
-        "D": 4.0
+        "D": 4.0,
+        "F": 4.0
       },
+      "orderedIdentifiers": [
+        "C",
+        "D",
+        "F"
+      ],
       "identifier": "G"
     }
   ]

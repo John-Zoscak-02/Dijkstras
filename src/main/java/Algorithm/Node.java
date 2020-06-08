@@ -1,11 +1,12 @@
 package Algorithm;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Node implements Comparable {
 
-    private Map<Double, String> connections;
     private Map<String, Double> edges;
+    private String[] orderedIdentifiers;
     private String identifier;
 
     public Node(String identifier) {
@@ -17,34 +18,70 @@ public class Node implements Comparable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Node node = (Node) o;
-        return Objects.equals(connections, node.connections) &&
+        return Objects.equals(edges, node.edges) &&
+                Arrays.equals(orderedIdentifiers, node.orderedIdentifiers) &&
                 Objects.equals(identifier, node.identifier);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(connections, identifier);
+        int result = Objects.hash(edges, identifier);
+        result = 31 * result + Arrays.hashCode(orderedIdentifiers);
+        return result;
     }
 
     public String getIdentifier() {
         return identifier;
     }
 
-
-    public Map<Double, String> getConnections() {
-        return connections;
+    public String[] getConnectedNodeOrderedIdentifiers() {
+        return orderedIdentifiers;
     }
 
     public Map<String, Double> getEdges() {
         return edges;
     }
 
-    public void setConnections(Map<Double, String> connections) {
-        this.connections = connections;
-        edges = new HashMap<>();
-        for (Double d : connections.keySet()) {
-            edges.put(connections.get(d), d);
+    public void setEdges(Map<String, Double> edges) {
+        this.edges = edges;
+
+        orderedIdentifiers = parallelSort(edges.values(), edges.keySet());
+    }
+
+    public String[] parallelSort(Collection<Double> comparable, Set<String> corresponding) {
+        Map<Double, ArrayList<String> > linked = new HashMap<>();
+        Set<Double> doubles = new TreeSet<>();
+
+        Iterator<String> it = corresponding.iterator();
+
+        for ( Double d : comparable ) {
+            doubles.add(d);
+            ArrayList<String> bucket = linked.get(d);
+            Optional<ArrayList<String>> optional = Optional.ofNullable(bucket);
+            if ( !optional.isPresent() ) {
+                bucket = new ArrayList<>();
+            }
+            if ( it.hasNext() ) {
+                bucket.add(it.next());
+            }
+            linked.put(d, bucket);
         }
+
+//        System.out.println(identifier + ": " + linked);
+
+        String[] sorted = new String[corresponding.size()];
+        Double[] dubs = doubles.toArray(new Double[doubles.size()]);
+        Arrays.sort(dubs);
+        int x = 0;
+        for ( Object d : dubs ) {
+            for ( String s : linked.get((Double)d) ) {
+//                System.out.println(x + "  ==  " + s);
+                sorted[x] = s;
+                x++;
+            }
+        }
+
+        return sorted;
     }
 
     @Override
@@ -59,7 +96,8 @@ public class Node implements Comparable {
     @Override
     public String toString() {
         return "Algorithm.Node{" +
-                "connections=" + connections +
+                "edges=" + edges +
+                "orderedIdentifiers=" + orderedIdentifiers +
                 ", identifier='" + identifier + '\'' +
                 '}';
     }

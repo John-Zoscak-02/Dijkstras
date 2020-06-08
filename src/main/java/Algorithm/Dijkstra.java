@@ -1,11 +1,11 @@
 package Algorithm;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Dijkstra {
     public static Object[][] dijkstras(WeightedGraph weightedGraph, Node source ) {
+//        System.out.println("Starting: " + source.getIdentifier());
+
         Object[][] chart = init(weightedGraph,source);
         List<String> visited = new ArrayList<>();
 
@@ -21,11 +21,11 @@ public class Dijkstra {
 //        printChart(chart);
 //        System.out.println(visited);
 
-        for ( String identifier : source.getEdges().keySet() ) {
+        for ( String identifier : source.getConnectedNodeOrderedIdentifiers() ) {
             chart = updateChart(weightedGraph, weightedGraph.get(identifier), source, visited, chart, identifiers);
         }
 
-        for ( String identifier : source.getEdges().keySet() ) {
+        for ( String identifier : source.getConnectedNodeOrderedIdentifiers() ) {
             chart = dijkstras(weightedGraph, weightedGraph.get(identifier), visited, chart, identifiers);
         }
 //        printChart( chart );
@@ -33,9 +33,11 @@ public class Dijkstra {
     }
 
     private static Object[][] updateChart(WeightedGraph weightedGraph, Node node, Node lastNode, List<String> visited, Object[][] chart, String[] identifiers ) {
-        for ( String identifier : node.getEdges().keySet() ) {
+//        System.out.println("Updating: " + node.getIdentifier());
+        for ( String identifier : node.getConnectedNodeOrderedIdentifiers() ) {
             if ( !visited.contains(identifier) ) {
                 if ( !weightedGraph.get(identifier).equals(lastNode) && (Double)chart[Arrays.binarySearch(identifiers, identifier)][1] > node.getEdges().get(identifier) + (Double)chart[Arrays.binarySearch(identifiers, node.getIdentifier())][1] ) {
+//                    System.out.println("Changing path to: " + identifier);
                     chart[Arrays.binarySearch(identifiers, identifier)][1] = node.getEdges().get(identifier) + (Double)chart[Arrays.binarySearch(identifiers, node.getIdentifier())][1];
                     chart[Arrays.binarySearch(identifiers, identifier)][2] = node.getIdentifier();
                 }
@@ -48,13 +50,15 @@ public class Dijkstra {
     }
 
     private static Object[][] dijkstras(WeightedGraph weightedGraph, Node node, List<String> visited, Object[][] chart, String[] identifiers ) {
-        for ( String identifier : node.getEdges().keySet() ) {
+//        System.out.println("Recurring: " + node.getIdentifier());
+
+        for ( String identifier : node.getConnectedNodeOrderedIdentifiers() ) {
             if ( !visited.contains(identifier) ) {
                 chart = updateChart(weightedGraph, weightedGraph.get(identifier), node, visited, chart, identifiers);
             }
         }
         visited.add(node.getIdentifier());
-        for ( String identifier : node.getEdges().keySet() ) {
+        for ( String identifier : node.getConnectedNodeOrderedIdentifiers() ) {
             if ( !visited.contains(identifier) ) {
                 chart = dijkstras(weightedGraph, weightedGraph.get(identifier), visited, chart, identifiers);
             }
@@ -85,6 +89,7 @@ public class Dijkstra {
     }
 
     public static void printChart( Object[][] chart ) {
+        System.out.println( String.format("%12s%11s%7s", "Node", "Distance", "Via") );
         for ( Object[] x : chart ) {
             for ( Object item : x ) {
                 System.out.print( String.format("%10s", item) );

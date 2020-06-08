@@ -1,213 +1,225 @@
 {
   "nodes": {
     "A": {
-      "connections": {
-        "8.0": "B",
-        "2.0": "C",
-        "5.0": "D"
-      },
       "edges": {
         "B": 8.0,
         "C": 2.0,
         "D": 5.0
       },
+      "orderedIdentifiers": [
+        "C",
+        "D",
+        "B"
+      ],
       "identifier": "A"
     },
     "B": {
-      "connections": {
-        "8.0": "A",
-        "2.0": "D",
-        "13.0": "F"
-      },
       "edges": {
         "A": 8.0,
         "D": 2.0,
         "F": 13.0
       },
+      "orderedIdentifiers": [
+        "D",
+        "A",
+        "F"
+      ],
       "identifier": "B"
     },
     "C": {
-      "connections": {
-        "2.0": "D",
-        "5.0": "E"
-      },
       "edges": {
+        "A": 2.0,
         "D": 2.0,
         "E": 5.0
       },
+      "orderedIdentifiers": [
+        "A",
+        "D",
+        "E"
+      ],
       "identifier": "C"
     },
     "D": {
-      "connections": {
-        "2.0": "C",
-        "1.0": "E",
-        "5.0": "A",
-        "6.0": "F"
-      },
       "edges": {
         "A": 5.0,
+        "B": 2.0,
         "C": 2.0,
         "E": 1.0,
         "F": 6.0
       },
+      "orderedIdentifiers": [
+        "E",
+        "B",
+        "C",
+        "A",
+        "F"
+      ],
       "identifier": "D"
     },
     "E": {
-      "connections": {
-        "1.0": "G",
-        "5.0": "C"
-      },
       "edges": {
         "C": 5.0,
+        "D": 1.0,
         "G": 1.0
       },
+      "orderedIdentifiers": [
+        "D",
+        "G",
+        "C"
+      ],
       "identifier": "E"
     },
     "F": {
-      "connections": {
-        "2.0": "G",
-        "6.0": "D",
-        "3.0": "H",
-        "13.0": "B"
-      },
       "edges": {
         "B": 13.0,
         "D": 6.0,
         "G": 2.0,
         "H": 3.0
       },
+      "orderedIdentifiers": [
+        "G",
+        "H",
+        "D",
+        "B"
+      ],
       "identifier": "F"
     },
     "G": {
-      "connections": {
-        "1.0": "E",
-        "2.0": "F",
-        "3.0": "D",
-        "6.0": "H"
-      },
       "edges": {
         "D": 3.0,
         "E": 1.0,
         "F": 2.0,
         "H": 6.0
       },
+      "orderedIdentifiers": [
+        "E",
+        "F",
+        "D",
+        "H"
+      ],
       "identifier": "G"
     },
     "H": {
-      "connections": {
-        "3.0": "F",
-        "6.0": "G"
-      },
       "edges": {
         "F": 3.0,
         "G": 6.0
       },
+      "orderedIdentifiers": [
+        "F",
+        "G"
+      ],
       "identifier": "H"
     }
   },
   "nodeArr": [
     {
-      "connections": {
-        "8.0": "B",
-        "2.0": "C",
-        "5.0": "D"
-      },
       "edges": {
         "B": 8.0,
         "C": 2.0,
         "D": 5.0
       },
+      "orderedIdentifiers": [
+        "C",
+        "D",
+        "B"
+      ],
       "identifier": "A"
     },
     {
-      "connections": {
-        "8.0": "A",
-        "2.0": "D",
-        "13.0": "F"
-      },
       "edges": {
         "A": 8.0,
         "D": 2.0,
         "F": 13.0
       },
+      "orderedIdentifiers": [
+        "D",
+        "A",
+        "F"
+      ],
       "identifier": "B"
     },
     {
-      "connections": {
-        "2.0": "D",
-        "5.0": "E"
-      },
       "edges": {
+        "A": 2.0,
         "D": 2.0,
         "E": 5.0
       },
+      "orderedIdentifiers": [
+        "A",
+        "D",
+        "E"
+      ],
       "identifier": "C"
     },
     {
-      "connections": {
-        "2.0": "C",
-        "1.0": "E",
-        "5.0": "A",
-        "6.0": "F"
-      },
       "edges": {
         "A": 5.0,
+        "B": 2.0,
         "C": 2.0,
         "E": 1.0,
         "F": 6.0
       },
+      "orderedIdentifiers": [
+        "E",
+        "B",
+        "C",
+        "A",
+        "F"
+      ],
       "identifier": "D"
     },
     {
-      "connections": {
-        "1.0": "G",
-        "5.0": "C"
-      },
       "edges": {
         "C": 5.0,
+        "D": 1.0,
         "G": 1.0
       },
+      "orderedIdentifiers": [
+        "D",
+        "G",
+        "C"
+      ],
       "identifier": "E"
     },
     {
-      "connections": {
-        "2.0": "G",
-        "6.0": "D",
-        "3.0": "H",
-        "13.0": "B"
-      },
       "edges": {
         "B": 13.0,
         "D": 6.0,
         "G": 2.0,
         "H": 3.0
       },
+      "orderedIdentifiers": [
+        "G",
+        "H",
+        "D",
+        "B"
+      ],
       "identifier": "F"
     },
     {
-      "connections": {
-        "1.0": "E",
-        "2.0": "F",
-        "3.0": "D",
-        "6.0": "H"
-      },
       "edges": {
         "D": 3.0,
         "E": 1.0,
         "F": 2.0,
         "H": 6.0
       },
+      "orderedIdentifiers": [
+        "E",
+        "F",
+        "D",
+        "H"
+      ],
       "identifier": "G"
     },
     {
-      "connections": {
-        "3.0": "F",
-        "6.0": "G"
-      },
       "edges": {
         "F": 3.0,
         "G": 6.0
       },
+      "orderedIdentifiers": [
+        "F",
+        "G"
+      ],
       "identifier": "H"
     }
   ]
