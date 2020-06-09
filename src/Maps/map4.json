@@ -1,0 +1,252 @@
+{
+  "nodes": {
+    "A": {
+      "edges": {
+        "B": 10.0,
+        "D": 7.0
+      },
+      "orderedIdentifiers": [
+        "D",
+        "B"
+      ],
+      "identifier": "A"
+    },
+    "B": {
+      "edges": {
+        "A": 10.0,
+        "C": 10.0,
+        "E": 15.0,
+        "F": 12.0
+      },
+      "orderedIdentifiers": [
+        "A",
+        "C",
+        "F",
+        "E"
+      ],
+      "identifier": "B"
+    },
+    "C": {
+      "edges": {
+        "B": 10.0,
+        "D": 15.0,
+        "G": 8.0,
+        "H": 12.0
+      },
+      "orderedIdentifiers": [
+        "G",
+        "B",
+        "H",
+        "D"
+      ],
+      "identifier": "C"
+    },
+    "D": {
+      "edges": {
+        "A": 7.0,
+        "C": 15.0,
+        "F": 7.0
+      },
+      "orderedIdentifiers": [
+        "A",
+        "F",
+        "C"
+      ],
+      "identifier": "D"
+    },
+    "E": {
+      "edges": {
+        "B": 15.0,
+        "G": 13.0,
+        "H": 9.0
+      },
+      "orderedIdentifiers": [
+        "H",
+        "G",
+        "B"
+      ],
+      "identifier": "E"
+    },
+    "F": {
+      "edges": {
+        "B": 12.0,
+        "D": 7.0,
+        "G": 15.0,
+        "H": 22.0
+      },
+      "orderedIdentifiers": [
+        "D",
+        "B",
+        "G",
+        "H"
+      ],
+      "identifier": "F"
+    },
+    "G": {
+      "edges": {
+        "C": 8.0,
+        "E": 13.0,
+        "F": 15.0,
+        "I": 5.0
+      },
+      "orderedIdentifiers": [
+        "I",
+        "C",
+        "E",
+        "F"
+      ],
+      "identifier": "G"
+    },
+    "H": {
+      "edges": {
+        "C": 12.0,
+        "E": 9.0,
+        "F": 22.0,
+        "I": 9.0
+      },
+      "orderedIdentifiers": [
+        "E",
+        "I",
+        "C",
+        "F"
+      ],
+      "identifier": "H"
+    },
+    "I": {
+      "edges": {
+        "G": 5.0,
+        "H": 9.0
+      },
+      "orderedIdentifiers": [
+        "G",
+        "H"
+      ],
+      "identifier": "I"
+    }
+  },
+  "nodeArr": [
+    {
+      "edges": {
+        "B": 10.0,
+        "D": 7.0
+      },
+      "orderedIdentifiers": [
+        "D",
+        "B"
+      ],
+      "identifier": "A"
+    },
+    {
+      "edges": {
+        "A": 10.0,
+        "C": 10.0,
+        "E": 15.0,
+        "F": 12.0
+      },
+      "orderedIdentifiers": [
+        "A",
+        "C",
+        "F",
+        "E"
+      ],
+      "identifier": "B"
+    },
+    {
+      "edges": {
+        "B": 10.0,
+        "D": 15.0,
+        "G": 8.0,
+        "H": 12.0
+      },
+      "orderedIdentifiers": [
+        "G",
+        "B",
+        "H",
+        "D"
+      ],
+      "identifier": "C"
+    },
+    {
+      "edges": {
+        "A": 7.0,
+        "C": 15.0,
+        "F": 7.0
+      },
+      "orderedIdentifiers": [
+        "A",
+        "F",
+        "C"
+      ],
+      "identifier": "D"
+    },
+    {
+      "edges": {
+        "B": 15.0,
+        "G": 13.0,
+        "H": 9.0
+      },
+      "orderedIdentifiers": [
+        "H",
+        "G",
+        "B"
+      ],
+      "identifier": "E"
+    },
+    {
+      "edges": {
+        "B": 12.0,
+        "D": 7.0,
+        "G": 15.0,
+        "H": 22.0
+      },
+      "orderedIdentifiers": [
+        "D",
+        "B",
+        "G",
+        "H"
+      ],
+      "identifier": "F"
+    },
+    {
+      "edges": {
+        "C": 8.0,
+        "E": 13.0,
+        "F": 15.0,
+        "I": 5.0
+      },
+      "orderedIdentifiers": [
+        "I",
+        "C",
+        "E",
+        "F"
+      ],
+      "identifier": "G"
+    },
+    {
+      "edges": {
+        "C": 12.0,
+        "E": 9.0,
+        "F": 22.0,
+        "I": 9.0
+      },
+      "orderedIdentifiers": [
+        "E",
+        "I",
+        "C",
+        "F"
+      ],
+      "identifier": "H"
+    },
+    {
+      "edges": {
+        "G": 5.0,
+        "H": 9.0
+      },
+      "orderedIdentifiers": [
+        "G",
+        "H"
+      ],
+      "identifier": "I"
+    }
+  ]
+}
