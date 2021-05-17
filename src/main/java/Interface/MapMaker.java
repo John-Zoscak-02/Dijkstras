@@ -26,48 +26,34 @@ public class MapMaker {
         Node eNode = new Node( "E" );
         Node fNode = new Node( "F" );
         Node gNode = new Node( "G" );
-        Node hNode = new Node( "H" );
-        Node iNode = new Node( "I" );
 
         HashMap<String, Double> aMap = new HashMap<>();
-        aMap.put("D", 7.0 );
-        aMap.put("B", 10.0 );
+        aMap.put("B", 3.0);
+        aMap.put("D", 5.0);
+        aMap.put("C", 4.0);
         HashMap<String, Double> bMap = new HashMap<>();
-        bMap.put("E", 15.0);
-        bMap.put("A", 10.0);
-        bMap.put("F", 12.0);
-        bMap.put("C", 10.0);
+        bMap.put("A", 3.0);
+        bMap.put("D", 1.0);
+        bMap.put("E", 4.0);
         HashMap<String, Double> cMap = new HashMap<>();
-        cMap.put("B", 10.0);
-        cMap.put("D", 15.0);
-        cMap.put("G", 8.0);
-        cMap.put("H", 12.0);
+        cMap.put("A", 4.0);
+        cMap.put("G", 3.0);
         HashMap<String, Double> dMap = new HashMap<>();
-        dMap.put("A", 7.0);
-        dMap.put("C", 15.0);
-        dMap.put("F", 7.0);
+        dMap.put("A", 5.0);
+        dMap.put("B", 1.0);
+        dMap.put("E", 2.0);
+        dMap.put("G", 4.0);
         HashMap<String, Double> eMap = new HashMap<>();
-        eMap.put("B", 15.0);
-        eMap.put("G", 13.0);
-        eMap.put("H", 9.0);
+        eMap.put("B", 4.0);
+        eMap.put("D", 2.0);
+        eMap.put("F", 4.0);
         HashMap<String, Double> fMap = new HashMap<>();
-        fMap.put("G", 15.0);
-        fMap.put("H", 22.0);
-        fMap.put("D", 7.0);
-        fMap.put("B", 12.0);
+        fMap.put("E", 4.0);
+        fMap.put("G", 4.0);
         HashMap<String, Double> gMap = new HashMap<>();
-        gMap.put("E", 13.0);
-        gMap.put("F", 15.0);
-        gMap.put("C", 8.0);
-        gMap.put("I", 5.0);
-        HashMap<String, Double> hMap = new HashMap<>();
-        hMap.put("F", 22.0);
-        hMap.put("E", 9.0);
-        hMap.put("C", 12.0);
-        hMap.put("I", 9.0);
-        HashMap<String, Double> iMap = new HashMap<>();
-        iMap.put("H", 9.0);
-        iMap.put("G", 5.0);
+        gMap.put("F", 4.0);
+        gMap.put("D", 4.0);
+        gMap.put("C", 3.0);
 
         aNode.setEdges( aMap );
         bNode.setEdges( bMap );
@@ -76,8 +62,6 @@ public class MapMaker {
         eNode.setEdges( eMap );
         fNode.setEdges( fMap );
         gNode.setEdges( gMap );
-        hNode.setEdges( hMap );
-        iNode.setEdges( iMap );
 
         List<Node> nodes = new ArrayList<>();
         nodes.add( aNode );
@@ -87,8 +71,6 @@ public class MapMaker {
         nodes.add( eNode );
         nodes.add( fNode );
         nodes.add( gNode );
-        nodes.add( hNode );
-        nodes.add( iNode );
 
         ///////////////////////////////////////
 
