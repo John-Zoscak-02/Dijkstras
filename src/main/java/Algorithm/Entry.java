@@ -1,5 +1,8 @@
 package Algorithm;
 
+import jdk.internal.jline.internal.Nullable;
+
+import java.util.List;
 import java.util.Objects;
 
 public class Entry implements Comparable<Entry>{
@@ -10,7 +13,7 @@ public class Entry implements Comparable<Entry>{
     public Entry(Node vertex) {
         this.vertex = vertex;
         this.previousNode = null;
-        this.distanceFromBase = Integer.MAX_VALUE;
+        this.distanceFromBase = Integer.MAX_VALUE-10;
     }
 
     public int getDistanceFromBase() {
@@ -48,29 +51,11 @@ public class Entry implements Comparable<Entry>{
 
     @Override
     public int compareTo(Entry o) {
-        if (vertex.isBase()) {
-            return -1;
-        }
-        else if (o.getVertex().isBase()) {
-            return 1;
-        }
-        for (Node node1 : Dijkstra.visited) {
-            if ( node1.hasNeighbor(o.getVertex()) ) {
-                for (Node node2 : Dijkstra.visited) {
-                    if ( node2.hasNeighbor(getVertex()) ) {
-                        return distanceFromBase - o.distanceFromBase;
-                    }
-                    else {
-                        return 1;
-                    }
-                }
-            }
-        }
-        for (Node node3 : Dijkstra.visited) {
-            if ( node3.hasNeighbor(getVertex()) ) {
-                return -1;
-            }
-        }
-        return distanceFromBase - o.distanceFromBase;
+        return getVertex().getIdentifier().compareTo(o.getVertex().getIdentifier());
+    }
+
+    @Override
+    public String toString() {
+        return "   " + vertex + "     " + distanceFromBase + "            " + previousNode;
     }
 }
