@@ -1,0 +1,6 @@
+# ignore gradle, idea env, and lock files
+gradle/**
+.gradle
+.idea/**
+**/build/
+*.lock
