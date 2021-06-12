@@ -1,16 +1,15 @@
-package Interface;
+package Runner;
 
 import Algorithm.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 
-import javax.imageio.stream.FileImageOutputStream;
 import java.io.*;
 import java.nio.file.Files;
 import java.util.*;
 
-public class Interface {
+public class Run {
 
     private static Graph graph;
 
@@ -32,9 +31,9 @@ public class Interface {
         }
 
         public void createUML() {
-            System.out.println("Creating file...");
-            File mapsFile = newFile();
-            System.out.println("Created file successfully. Path: " + mapsFile.getPath());
+            System.out.println("Creating UML file...");
+            File mapsFile = newUMLFile();
+            System.out.println("Created UML file successfully. Path: " + mapsFile.getPath());
 
             System.out.println("Building UML diagram.....");
             try {
@@ -56,10 +55,9 @@ public class Interface {
                 e.printStackTrace();
             }
             System.out.println("***To view uml diagram, you can use plant uml.....");
-            System.out.println("done");
         }
 
-        private static File newFile() {
+        private static File newUMLFile() {
             File file = null;
             boolean notDone = true;
             int i = 0;
@@ -73,6 +71,41 @@ public class Interface {
             }
             return file;
         }
+
+        public void createJson() {
+            System.out.println("Creating Json file...");
+            System.out.println("didnt make file");
+            File mapsFile = newJsonFile();
+            System.out.println("Created Json file successfully. Path: " + mapsFile.getPath());
+
+            System.out.println("Building Json diagram.....");
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            try {
+                BufferedWriter fileWriter = new BufferedWriter( new FileWriter(mapsFile) );
+                gson.toJson( this, fileWriter);
+                fileWriter.flush();
+                fileWriter.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            System.out.println("Made Files");
+        }
+
+        private static File newJsonFile() {
+            File file = null;
+            boolean notDone = true;
+            int i = 0;
+            while ( notDone ) {
+                if ( !Files.exists( new File( String.format( "src/Map Makers/map%d.json", i )).toPath() )) {
+                    file = new File( String.format( "src/Map Makers/map%d.json", i ) );
+                    file.getParentFile().mkdirs();
+                    notDone = false;
+                }
+                i++;
+
+            }
+            return file;
+        }
     }
 
     public static void main(String[] args ) {
@@ -82,46 +115,30 @@ public class Interface {
         Node cNode = new Node( "C" );
         Node dNode = new Node( "D" );
         Node eNode = new Node( "E" );
-        Node fNode = new Node( "F" );
-        Node gNode = new Node( "G" );
-        Node hNode = new Node( "H" );
 
         aNode.setAsBase();
 
-        aNode.path(bNode, 8);
-        aNode.path(cNode, 2);
-        aNode.path(dNode, 5);
-        bNode.path(aNode, 8);
-        bNode.path(dNode, 2);
-        bNode.path(fNode, 13);
-        cNode.path(aNode, 2);
-        cNode.path(dNode, 2);
-        cNode.path(eNode, 5);
+        aNode.path(bNode, 6);
+        aNode.path(dNode, 1);
+        dNode.path(aNode, 1);
         dNode.path(bNode, 2);
-        dNode.path(aNode, 5);
-        dNode.path(cNode, 2);
         dNode.path(eNode, 1);
-        dNode.path(gNode, 3);
-        dNode.path(fNode, 6);
-        eNode.path(cNode, 5);
+        bNode.path(aNode, 6);
+        bNode.path(dNode, 2);
+        bNode.path(eNode, 2);
+        bNode.path(cNode, 5);
         eNode.path(dNode, 1);
-        eNode.path(gNode, 1);
-        fNode.path(bNode, 13);
-        fNode.path(dNode, 6);
-        fNode.path(gNode, 2);
-        fNode.path(hNode, 3);
-        gNode.path(eNode, 1);
-        gNode.path(dNode, 3);
-        gNode.path(fNode, 2);
-        gNode.path(hNode, 6);
-        hNode.path(fNode, 3);
-        hNode.path(gNode, 6);
+        eNode.path(bNode, 2);
+        eNode.path(cNode, 5);
+        cNode.path(bNode, 5);
+        cNode.path(eNode, 5);
 
         graph = new Graph();
-        graph.addNodes(aNode, bNode, cNode, dNode, eNode ,fNode, gNode, hNode);
+        graph.addNodes(aNode, bNode, cNode, dNode, eNode);
         ///////////////////////////////////////
 
         graph.createUML();
+        graph.createJson();
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Apply Dijkstras?");
