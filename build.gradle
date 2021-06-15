@@ -1,5 +1,14 @@
 plugins {
-    id 'java'
+    id 'application'
+}
+
+apply plugin : "java"
+ext {
+    javaMainClass = "Runner.Run"
+}
+
+application {
+    mainClassName = javaMainClass
 }
 
 group 'org.example'
@@ -9,11 +18,6 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
-}
-
-task deploy(type: JavaExec) {
-    main = 'Runner.Run'
-    classpath = sourceSets.main.runtimeClasspath
 }
 
 dependencies {

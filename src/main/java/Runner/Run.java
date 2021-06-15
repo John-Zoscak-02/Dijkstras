@@ -15,6 +15,23 @@ public class Run {
     private static Graph graph;
 
     static class Graph {
+
+        class Ref {
+            private List<String> neighbors;
+            private String identifier;
+            private boolean baseTag;
+
+            public Ref(Node node) {
+                neighbors = new ArrayList<>();
+                for (Edge edge : node.getEdges()) {
+                    neighbors.add(edge.getSecond().getIdentifier());
+                }
+                identifier = node.getIdentifier();
+                baseTag = node.isBase();
+            }
+
+        }
+
         private List<Node> nodes;
 
         public Graph() {
@@ -81,9 +98,15 @@ public class Run {
 
             System.out.println("Building Json diagram.....");
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+            List<Ref> refs = new ArrayList<>();
+            for (Node node : nodes) {
+                refs.add(new Ref(node));
+            }
+
             try {
                 BufferedWriter fileWriter = new BufferedWriter( new FileWriter(mapsFile) );
-                gson.toJson( this, fileWriter);
+                gson.toJson( refs, fileWriter);
                 fileWriter.flush();
                 fileWriter.close();
             } catch (Exception e) {
@@ -140,17 +163,13 @@ public class Run {
 
         graph.createUML();
         graph.createJson();
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Apply Dijkstras?");
-        if ( scanner.next().contains("y") ) {
-            try {
-                Dijkstra dijkstra = new Dijkstra(graph.getNodes());
-                dijkstra.run();
-                dijkstra.printTable();
-            } catch ( Exception e ) {
-                e.printStackTrace();
-            }
+        System.out.println("Applying Dijkstra's");
+        try {
+            Dijkstra dijkstra = new Dijkstra(graph.getNodes());
+            dijkstra.run();
+            dijkstra.printTable();
+        } catch ( Exception e ) {
+            e.printStackTrace();
         }
         System.out.println("Done");
     }
