@@ -12,16 +12,10 @@ repositories {
 }
 
 task deploy(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
     main = 'Runner.Run'
+    classpath = sourceSets.main.runtimeClasspath
 }
 
 dependencies {
-//    implementation files('libs/tesjeract.jar')
-//    implementation 'tw.edu.ntu.csie:libsvm:3.17'
-//    implementation 'org.apache.httpcomponents:httpclient:4.5'
-//    implementation 'org.apache.httpcomponents:httpcore:4.4'
-//    implementation 'commons-codec:commons-codec:1.9'
-    
     implementation 'com.google.code.gson:gson:2.8.6'
 }
