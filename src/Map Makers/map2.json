@@ -1,0 +1,122 @@
+[
+  {
+    "neighbors": [
+      "B",
+      "C",
+      "D"
+    ],
+    "distances": [
+      8,
+      2,
+      5
+    ],
+    "identifier": "A",
+    "baseTag": true
+  },
+  {
+    "neighbors": [
+      "A",
+      "D",
+      "F"
+    ],
+    "distances": [
+      8,
+      2,
+      13
+    ],
+    "identifier": "B",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "A",
+      "D",
+      "E"
+    ],
+    "distances": [
+      2,
+      2,
+      5
+    ],
+    "identifier": "C",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "B",
+      "A",
+      "C",
+      "E",
+      "G",
+      "F"
+    ],
+    "distances": [
+      2,
+      5,
+      2,
+      1,
+      3,
+      6
+    ],
+    "identifier": "D",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "C",
+      "D",
+      "G"
+    ],
+    "distances": [
+      5,
+      1,
+      1
+    ],
+    "identifier": "E",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "B",
+      "D",
+      "G",
+      "H"
+    ],
+    "distances": [
+      13,
+      6,
+      2,
+      3
+    ],
+    "identifier": "F",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "E",
+      "D",
+      "F",
+      "H"
+    ],
+    "distances": [
+      1,
+      3,
+      2,
+      6
+    ],
+    "identifier": "G",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "F",
+      "G"
+    ],
+    "distances": [
+      3,
+      6
+    ],
+    "identifier": "H",
+    "baseTag": false
+  }
+]

@@ -13,9 +13,17 @@ public class Node {
         edges = new ArrayList<>();
         baseTag = false;
     }
+    public Node(String identifier, boolean baseTag) {
+        this.identifier = identifier;
+        this.baseTag = baseTag;
+    }
 
     public List<Edge> getEdges() {
         return edges;
+    }
+
+    public void setEdges(List<Edge> edges) {
+        this.edges = edges;
     }
 
     public Edge path(Node other, int distance) {
@@ -36,18 +44,18 @@ public class Node {
         return identifier;
     }
 
-    public void setIdentifier(String identifier) {
-        this.identifier = identifier;
-    }
-
-    public boolean hasNeighbor(Node o) {
-        for (Edge edge : edges) {
-            if (o.equals(edge.getSecond())) {
-                return true;
-            }
-        }
-        return false;
-    }
+//    public void setIdentifier(String identifier) {
+//        this.identifier = identifier;
+//    }
+//
+//    public boolean hasNeighbor(Node o) {
+//        for (Edge edge : edges) {
+//            if (o.equals(edge.getSecond())) {
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
 
     @Override
     public boolean equals(Object o) {

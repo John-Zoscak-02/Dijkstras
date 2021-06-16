@@ -1,4 +1,23 @@
-Node aNode = new Node( "A" );
+package Exec;
+
+import Algorithm.*;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import Algorithm.Node;
+
+
+import java.io.*;
+import java.nio.file.Files;
+import java.util.*;
+
+public class Maker {
+
+    private static Graph graph;
+
+    public static void main(String[] args ) {
+
+        ///////////////create new map////////////////
+        Node aNode = new Node( "A" );
         Node bNode = new Node( "B" );
         Node cNode = new Node( "C" );
         Node dNode = new Node( "D" );
@@ -40,3 +59,18 @@ Node aNode = new Node( "A" );
 
         graph = new Graph();
         graph.addNodes(aNode, bNode, cNode, dNode, eNode ,fNode, gNode, hNode);
+        ///////////////////////////////////////
+
+        graph.createUML();
+        graph.createJson();
+        System.out.println("Applying Dijkstra's");
+        try {
+            Dijkstra dijkstra = new Dijkstra(graph.getNodes());
+            dijkstra.run();
+            dijkstra.printTable();
+        } catch ( Exception e ) {
+            e.printStackTrace();
+        }
+        System.out.println("Done");
+    }
+}

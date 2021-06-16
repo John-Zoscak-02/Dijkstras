@@ -1,0 +1,70 @@
+[
+  {
+    "neighbors": [
+      "B",
+      "D"
+    ],
+    "distances": [
+      6,
+      1
+    ],
+    "identifier": "A",
+    "baseTag": true
+  },
+  {
+    "neighbors": [
+      "A",
+      "D",
+      "E",
+      "C"
+    ],
+    "distances": [
+      6,
+      2,
+      2,
+      5
+    ],
+    "identifier": "B",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "B",
+      "E"
+    ],
+    "distances": [
+      5,
+      5
+    ],
+    "identifier": "C",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "A",
+      "B",
+      "E"
+    ],
+    "distances": [
+      1,
+      2,
+      1
+    ],
+    "identifier": "D",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "D",
+      "B",
+      "C"
+    ],
+    "distances": [
+      1,
+      2,
+      5
+    ],
+    "identifier": "E",
+    "baseTag": false
+  }
+]
