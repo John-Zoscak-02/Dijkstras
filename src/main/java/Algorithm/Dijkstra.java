@@ -64,7 +64,7 @@ public class Dijkstra {
 
     public void run () {
         while (!queue.isEmpty()) {
-            System.out.println(queue);
+//            System.out.println(queue);
             Entry current = queue.peek();
             Node node = current.getVertex();
             if (node.isBase()) {

@@ -1,0 +1,185 @@
+[
+  {
+    "neighbors": [
+      "Minneapolis",
+      "Denver",
+      "San_Francisco"
+    ],
+    "distances": [
+      2661,
+      2161,
+      1306
+    ],
+    "identifier": "Seattle",
+    "baseTag": true
+  },
+  {
+    "neighbors": [
+      "Seattle",
+      "Denver",
+      "Dallas",
+      "Chicago"
+    ],
+    "distances": [
+      2661,
+      1483,
+      1532,
+      661
+    ],
+    "identifier": "Minneapolis",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "Seattle",
+      "Las_Vegas",
+      "Los_Angelos"
+    ],
+    "distances": [
+      1306,
+      919,
+      629
+    ],
+    "identifier": "San_Francisco",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "San_Francisco",
+      "Las_Vegas"
+    ],
+    "distances": [
+      629,
+      435
+    ],
+    "identifier": "Los_Angelos",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "San_Francisco",
+      "Los_Angelos",
+      "Dallas",
+      "Denver"
+    ],
+    "distances": [
+      919,
+      435,
+      1983,
+      1225
+    ],
+    "identifier": "Las_Vegas",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "Minneapolis",
+      "Seattle",
+      "Las_Vegas",
+      "Dallas"
+    ],
+    "distances": [
+      1483,
+      2161,
+      1225,
+      1258
+    ],
+    "identifier": "Denver",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "Minneapolis",
+      "Denver",
+      "Las_Vegas",
+      "Miami",
+      "Wash_DC"
+    ],
+    "distances": [
+      1532,
+      1258,
+      1983,
+      2161,
+      2113
+    ],
+    "identifier": "Dallas",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "Minneapolis",
+      "Wash_DC",
+      "Boston"
+    ],
+    "distances": [
+      661,
+      1145,
+      1613
+    ],
+    "identifier": "Chicago",
+    "baseTag": false
+  },
+  {
+    "neighbors": [
+      "Chicago",
+      "Dallas",
+      "Miami",
+      "New_York",
+      "Boston"
+    ],
+    "distances": [
+      1145,
+      2113,
+      1709,
+      383,
+      725
+    ],
+    "identifier": "Wash_DC",
+    "baseTag": false
+  },
+
+  {
+    "neighbors": [
+      "Wash_DC",
+      "Dallas",
+      "New_York"
+    ],
+    "distances": [
+      1709,
+      2161,
+      2145
+    ],
+    "identifier": "Miami",
+    "baseTag": false
+  },
+
+  {
+    "neighbors": [
+      "Wash_DC",
+      "Miami",
+      "Boston"
+    ],
+    "distances": [
+      383,
+      2145,
+      338
+    ],
+    "identifier": "New_York",
+    "baseTag": false
+  },
+
+  {
+    "neighbors": [
+      "Chicago",
+      "Wash_DC",
+      "New_York"
+    ],
+    "distances": [
+      1613,
+      725,
+      338
+    ],
+    "identifier": "Boston",
+    "baseTag": false
+  }
+]
