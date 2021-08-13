@@ -9,9 +9,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.nio.file.Files;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class Graph {
 
@@ -55,14 +53,19 @@ public class Graph {
         try {
             FileWriter fileWriter = new FileWriter(mapsFile);
             fileWriter.append("@startuml\n");
+            Set<Edge> edges = new TreeSet<>();
             for (Node node : nodes) {
                 fileWriter.append("\t(" + node.getIdentifier() + ")\n");
+                edges.addAll(node.getEdges());
             }
-            for (Node node : nodes) {
-                for (Edge edge : node.getEdges()) {
-                    fileWriter.append("\t" + edge.getFirst() + " --> " + edge.getSecond() + " : " + edge.getDistance() + "\n");
-                }
-                fileWriter.append("\n");
+//            for (Node node : nodes) {
+//                for (Edge edge : node.getEdges()) {
+//                    fileWriter.append("\t" + edge.getFirst() + " --> " + edge.getSecond() + " : " + edge.getDistance() + "\n");
+//                }
+//                fileWriter.append("\n");
+//            }
+            for (Edge e : edges) {
+                fileWriter.append("\t" + e.getFirst() + " -- " + e.getSecond() + " : " + e.getDistance() + "\n");
             }
             fileWriter.append("@enduml");
             fileWriter.flush();
