@@ -11,58 +11,25 @@
 	(Las_Vegas)
 	(Miami)
 	(Boston)
-	San_Francisco --> Seattle : 1306
-	San_Francisco --> Las_Vegas : 919
-	San_Francisco --> Los_Angelos : 629
-
-	Seattle --> Minneapolis : 2661
-	Seattle --> Denver : 2161
-	Seattle --> San_Francisco : 1306
-
-	Minneapolis --> Seattle : 2661
-	Minneapolis --> Denver : 1483
-	Minneapolis --> Dallas : 1532
-	Minneapolis --> Chicago : 661
-
-	Chicago --> Minneapolis : 661
-	Chicago --> Wash_DC : 1145
-	Chicago --> Boston : 1613
-
-	Wash_DC --> Chicago : 1145
-	Wash_DC --> Dallas : 2113
-	Wash_DC --> Miami : 1709
-	Wash_DC --> New_York : 383
-	Wash_DC --> Boston : 725
-
-	New_York --> Wash_DC : 383
-	New_York --> Miami : 2145
-	New_York --> Boston : 338
-
-	Los_Angelos --> San_Francisco : 629
-	Los_Angelos --> Las_Vegas : 435
-
-	Denver --> Minneapolis : 1483
-	Denver --> Seattle : 2161
-	Denver --> Las_Vegas : 1225
-	Denver --> Dallas : 1258
-
-	Dallas --> Minneapolis : 1532
-	Dallas --> Denver : 1258
-	Dallas --> Las_Vegas : 1983
-	Dallas --> Miami : 2161
-	Dallas --> Wash_DC : 2113
-
-	Las_Vegas --> San_Francisco : 919
-	Las_Vegas --> Los_Angelos : 435
-	Las_Vegas --> Dallas : 1983
-	Las_Vegas --> Denver : 1225
-
-	Miami --> Wash_DC : 1709
-	Miami --> Dallas : 2161
-	Miami --> New_York : 2145
-
-	Boston --> Chicago : 1613
-	Boston --> Wash_DC : 725
-	Boston --> New_York : 338
-
+	New_York -- Boston : 338
+	Wash_DC -- New_York : 383
+	Los_Angelos -- Las_Vegas : 435
+	San_Francisco -- Los_Angelos : 629
+	Minneapolis -- Chicago : 661
+	Wash_DC -- Boston : 725
+	San_Francisco -- Las_Vegas : 919
+	Chicago -- Wash_DC : 1145
+	Denver -- Las_Vegas : 1225
+	Denver -- Dallas : 1258
+	San_Francisco -- Seattle : 1306
+	Minneapolis -- Denver : 1483
+	Minneapolis -- Dallas : 1532
+	Chicago -- Boston : 1613
+	Wash_DC -- Miami : 1709
+	Dallas -- Las_Vegas : 1983
+	Wash_DC -- Dallas : 2113
+	New_York -- Miami : 2145
+	Seattle -- Denver : 2161
+	Dallas -- Miami : 2161
+	Seattle -- Minneapolis : 2661
 @enduml
